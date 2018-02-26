@@ -1,0 +1,42 @@
+plugins {
+    id "com.google.protobuf" version "0.8.4"
+    id "java"
+}
+
+group 'com.athaydes.tutorials'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile 'io.grpc:grpc-netty:1.10.0'
+    compile 'io.grpc:grpc-protobuf:1.10.0'
+    compile 'io.grpc:grpc-stub:1.10.0'
+//    compile group: 'io.netty:netty-tcnative-boringssl-static:2.0.7.Final'
+    testCompile 'junit:junit:4.12'
+}
+
+sourceSets.main.java {
+    srcDirs "$buildDir/generated/source/proto/main/grpc"
+    srcDirs "$buildDir/generated/source/proto/main/java"
+}
+
+protobuf {
+    protoc {
+        artifact = "com.google.protobuf:protoc:3.5.1-1"
+    }
+    plugins {
+        grpc {
+            artifact = 'io.grpc:protoc-gen-grpc-java:1.10.0'
+        }
+    }
+    generateProtoTasks {
+        all()*.plugins {
+            grpc {}
+        }
+    }
+}
