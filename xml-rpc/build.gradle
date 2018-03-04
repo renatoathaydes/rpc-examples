@@ -1,0 +1,17 @@
+plugins {
+    id "java"
+}
+
+group 'com.athaydes.tutorials'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile 'org.apache.xmlrpc:xmlrpc-server:3.1.3'
+    compile 'org.apache.xmlrpc:xmlrpc-client:3.1.3'
+}

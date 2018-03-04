@@ -1,4 +1,5 @@
 rootProject.name = 'rpc'
 include 'grpc'
 include 'graphql'
+include 'xml-rpc'
 
