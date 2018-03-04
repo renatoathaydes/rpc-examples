@@ -1,0 +1,13 @@
+schema {
+    query: QueryType
+}
+
+type QueryType {
+    sayHello(name: String!): Hello!
+    sayHelloAgain(name: String!) : Hello!
+}
+
+type Hello {
+  name: String!
+  message: String!
+}
