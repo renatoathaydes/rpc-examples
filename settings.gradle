@@ -3,4 +3,5 @@ include 'grpc'
 include 'graphql'
 include 'xml-rpc'
 include 'protobuf-tcp-rpc'
+include 'thrift'
 

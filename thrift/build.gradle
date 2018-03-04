@@ -1,0 +1,21 @@
+plugins {
+    id "java"
+    id "org.jruyi.thrift" version "0.4.0"
+}
+
+group 'com.athaydes.tutorials'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile 'org.apache.thrift:libthrift:0.11.0'
+}
+
+sourceSets.main.java {
+    srcDirs "$buildDir/generated-sources/thrift/gen-java"
+}
