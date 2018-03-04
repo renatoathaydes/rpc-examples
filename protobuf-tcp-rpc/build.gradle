@@ -1,0 +1,16 @@
+plugins {
+    id "java"
+}
+
+group 'com.athaydes.tutorials'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile 'com.athaydes.protobuf:protobuf-tcp-rpc:0.2.1'
+}
